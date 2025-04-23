@@ -3,12 +3,13 @@ import java.util.TimerTask;
 
 public class Main {
     public static void main(String[] args) {
+        NotificationService emailNotification = new EmailNotification();
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
 
             @Override
             public void run() {
-                new PushNotification().sendNotification("New message received!");
+                emailNotification.sendNotification("A New Email Message Incoming");
             }
         };
         timer.schedule(task ,5000);
