@@ -1,6 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
-
 public class PushNotification implements NotificationService{
     String title;
     PushNotification(){
@@ -8,7 +5,7 @@ public class PushNotification implements NotificationService{
     }
 
     @Override
-    public void sendNotification(String message) {;
+    public void sendNotification(String message) {
         System.out.println("Send push Notification :" + message);
     }
 
