@@ -14,5 +14,8 @@ public class Main {
         };
         timer.schedule(task ,5000);
 
+        NotificationService smsNotification = new SmsNotification();
+        smsNotification.sendNotification("Hello Sweetie \uD83C\uDF53");
+
     }
 }
